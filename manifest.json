@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Connect",
+  "version": "1.0",
+  "description": "A Chrome extension that sends connection requests to LinkedIn users.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.linkedin.com/"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["./scripts/content_script.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "./assets/icon.png",
+      "32": "./assets/icon.png",
+      "48": "./assets/icon.png",
+      "128": "./assets/icon.png"
+    },
+    "default_title": "LinkedIn Connect",
+    "default_popup": "./popup/popup.html"
+  }
+}
